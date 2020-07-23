@@ -3,30 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Blog</title>
   </head>
   <body>
     <div class="container">
-      <h1 class="mb-1"><%= article.title %></h1>
-      <div class="text-muted mb-2">
+      <h1 class="mb-1 well well-lg"><%= article.title %></h1>
+      <div class="text-muted container mb-2"style="margin:10px">
         <%= article.createdAt.toLocaleDateString() %>
       </div>
 
-      <div>
+      <div >
         <%- article.description %>
       </div>
-
-      <a href="/" class="btn btn-secondary">All Articles</a>
+<div class="mb-1 container" style="margin:10px">
+      <a href="/" class="btn btn-success">All Articles</a>
       <a href="/articles/edit/<%= article.id %>" class="btn btn-info">Edit</a>
-
-      <div>
+</div>
+      <div class="well">
         <%- article.sanitizedHtml %>
       </div>
     </div>

@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server.js"
+    "deploy":"gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
+  "homepage":"https://piyushb1.github.io/blogsite",
   "dependencies": {
     "body-parser": "^1.19.0",
     "dompurify": "^2.0.12",
