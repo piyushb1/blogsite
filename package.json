@@ -4,17 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "deploy":"gh-pages -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
-  "homepage":"https://piyushb1.github.io/blogsite",
+  "homepage": "https://piyushb1.github.io/blogsite",
   "dependencies": {
     "body-parser": "^1.19.0",
     "dompurify": "^2.0.12",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.3",
     "express": "^4.17.1",
+    "gh-pages": "^3.1.0",
     "hbs": "^4.1.1",
     "jsdom": "^16.3.0",
     "marked": "^1.1.1",
