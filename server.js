@@ -1,4 +1,3 @@
-var PORT = process.env.PORT || 5000;
 const express = require('express');
 const articleRouter = require('./routes/articles');
 const mongoose = require('mongoose');
@@ -6,6 +5,8 @@ const Article = require('./models/article');
 const methodOverride = require('method-override');
 
 const app = express();
+
+app.set('PORT', process.env.PORT || 5000);
 
 mongoose.connect('mongodb://localhost/blog', {
   useNewUrlParser: true,
@@ -26,4 +27,6 @@ app.get('/', async (req, res) => {
 
 app.use('/articles', articleRouter);
 
-app.listen(PORT);
+app.listen(app.get('PORT'), function () {
+  console.log('Node is runiing');
+});
