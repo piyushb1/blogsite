@@ -1,3 +1,4 @@
+var PORT = process.env.PORT || 5000;
 const express = require('express');
 const articleRouter = require('./routes/articles');
 const mongoose = require('mongoose');
@@ -25,4 +26,4 @@ app.get('/', async (req, res) => {
 
 app.use('/articles', articleRouter);
 
-app.listen(5000);
+app.listen(PORT);
