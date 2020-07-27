@@ -8,7 +8,7 @@ const app = express();
 
 app.set('PORT', process.env.PORT || 5000);
 
-mongoose.connect('mongodb://localhost/blog', {
+mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost/blog', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
