@@ -8,10 +8,16 @@ const app = express();
 
 app.set('PORT', process.env.PORT || 5000);
 
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost/blog', {
+mongoose.connect(process.env.MONGO_URL || 'mongodb://localhost/blog', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
+});
+
+//mongodb+srv://admin:n4tI7wwGSMOiQURw@cluster0.jorqq.mongodb.net/blog?retryWrites=true&w=majority
+
+mongoose.connection.on('connected', () => {
+  console.log('Mongoose connected');
 });
 
 app.set('view engine', 'ejs');
