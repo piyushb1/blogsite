@@ -1,4 +1,4 @@
-# [blogsite](https://createurblog.herokuapp.com/)
+# [blogsite](https://apunkablog.herokuapp.com/)
 This is a NodeJS website for posting blogs supported by MongoDB and ExpressJS
 
 
@@ -23,4 +23,4 @@ Building and running blogsite in your local dev environment is very easy. Be sur
 
 blogsite is now running, and can be accessed by pointing a web browser at [http://localhost:5000/](http://localhost:5000/)
 
-Live demo of website <a href="https://createurblog.herokuapp.com/" target="_blank">here</a>.
+Live demo of website <a href="https://apunkablog.herokuapp.com/" target="_blank">here</a>.
